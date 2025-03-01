@@ -1,56 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Personal Page</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 800px;
-        }
-        .content img {
-            margin-right: 20px;
-            max-width: 100%;
-            height: auto;
-            /* Apply grayscale filter for demonstration */
-            filter: grayscale(50%);
-            transition: filter 0.5s;
-        }
-        .content img:hover {
-            filter: grayscale(0%);
-        }
-        .content p {
-            flex: 1;
-            min-width: 250px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Personal Homepage - Runxin Shao</title>
+  
+  <!-- Meta tags for rich link previews (Open Graph) -->
+  <meta property="og:title" content="Personal Homepage - Runxin Shao">
+  <meta property="og:description" content="Discover Runxin Shao's projects, his passion for coding, and his journey in web development.">
+  <meta property="og:image" content="distopia.png">
+  <meta property="og:url" content="https://your-username.github.io/cs5356-hw3/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    /* Reset and base styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    /* Header styles with transition for interactive background change */
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      transition: background-color 0.3s;
+    }
+    
+    /* Main content container using Flexbox layout */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 800px;
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* Image styling with grayscale filter and smooth transition */
+    .content img {
+      margin-right: 20px;
+      max-width: 100%;
+      height: auto;
+      filter: grayscale(50%);
+      transition: filter 0.5s;
+    }
+    .content img:hover {
+      filter: grayscale(0%);
+    }
+    
+    /* Paragraph styling to work with flex layout */
+    .content p {
+      flex: 1;
+      min-width: 250px;
+      line-height: 1.5;
+    }
+    
+    /* Style for an extra interactive box */
+    #interactive-box {
+      width: 300px;
+      height: 100px;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+    
+    /* Footer styling */
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      margin-top: 20px;
+      font-size: 0.9em;
+    }
+    
+    /* Additional section styling for better separation */
+    section h2 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+  
+  <!-- Google Analytics snippet (示例代码，请将 'G-XXXXXXXXXX' 替换为你自己的 Measurement ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  
 </head>
 <body>
-    <header>
-        <h1>Welcome</h1>
-    </header>
-   
-    <section class="content">
-        <img src="distopia.png" alt="My personal photo" width="200">
-        <p>My name is Runxin Shao and I love coding.</p>
-    </section>
-   
-    <section>
-        <h2>More About Me</h2>
-        <details>
-            <summary>Click to learn more</summary>
-            <p>I am learning front-end development and exploring new CSS properties and HTML elements.</p>
-        </details>
-    </section>
+  <!-- Header：包含标题和简短描述 -->
+  <header id="page-header">
+    <h1>Welcome to My Personal Homepage</h1>
+    <p>Runxin Shao | Passionate Coder & Web Developer</p>
+  </header>
+  
+  <!-- 个人简介：图片和自我介绍 -->
+  <section class="content">
+    <img src="distopia.png" alt="Personal Photo" width="200">
+    <p>
+      Hello, my name is Runxin Shao and I love coding. I am passionate about web development, and I enjoy exploring new technologies.
+      This homepage serves as my personal space where I share projects, learning experiences, and my thoughts on design and code.
+    </p>
+  </section>
+  
+  <!-- 使用未学过的 HTML 元素 <details> 来创建一个可折叠区域 -->
+  <section class="content">
+    <h2>Learning About the &lt;details&gt; Element</h2>
+    <details>
+      <summary>Click here to learn more about &lt;details&gt;</summary>
+      <p>
+        I discovered that the <code>&lt;details&gt;</code> element allows you to create a collapsible section on your webpage.
+        It is useful for hiding lengthy or additional content until the user chooses to expand it. This helps in keeping the
+        page layout clean and focused. I appreciate its simplicity and built-in functionality, which avoids the need for extra JavaScript.
+      </p>
+    </details>
+  </section>
+  
+  <!-- 使用未学过的 CSS 属性：filter -->
+  <section class="content">
+    <h2>Understanding the CSS <code>filter</code> Property</h2>
+    <p>
+      In this project, I used the <code>filter</code> property to apply a grayscale effect to images.
+      The <code>filter</code> property enables a range of visual effects such as blurring, brightness adjustment, and contrast changes.
+      I learned that combining it with CSS transitions can create smooth and visually appealing effects, enhancing user interaction.
+    </p>
+  </section>
+  
+  <!-- 从 API 获取数据并动态显示 -->
+  <section class="content">
+    <h2>API Data Display</h2>
+    <div id="api-data">Loading data from API...</div>
+  </section>
+  
+  <!-- 加分项：交互式盒子，根据鼠标移动改变颜色 -->
+  <section class="content">
+    <h2>Interactive Box</h2>
+    <div id="interactive-box">Move your mouse over me!</div>
+  </section>
+  
+  <!-- 加分项：额外增加一个项目展示区 -->
+  <section class="content">
+    <h2>My Projects</h2>
+    <p>
+      Here are some of my projects:
+      <ul>
+        <li>Responsive Portfolio Website</li>
+        <li>Data Visualization Dashboard</li>
+        <li>RESTful API Integration</li>
+      </ul>
+      I continuously work on improving my skills and learning new technologies to build better user experiences.
+    </p>
+  </section>
+  
+  <!-- 页脚 -->
+  <footer>
+    <p>&copy; 2025 Runxin Shao. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    // 使用 fetch() 从 Agify API 获取 "John" 的预测年龄数据
+    fetch('https://api.agify.io?name=John')
+      .then(response => response.json())
+      .then(data => {
+          // 示例返回数据：{ name: "John", age: 52, count: 12345 }
+          const apiDiv = document.getElementById('api-data');
+          apiDiv.innerHTML = `<p>Predicted age for "John" is ${data.age} (based on ${data.count} samples).</p>`;
+      })
+      .catch(error => {
+          console.error('Error fetching API data:', error);
+          document.getElementById('api-data').innerHTML = '<p>Failed to load data.</p>';
+      });
+  
+    // 加分项：交互效果 —— 根据鼠标在盒子内的位置改变盒子的背景色
+    const interactiveBox = document.getElementById('interactive-box');
+    interactiveBox.addEventListener('mousemove', function(e) {
+        const rect = interactiveBox.getBoundingClientRect();
+        const x = e.clientX - rect.left; // 鼠标在元素内的 x 坐标
+        const y = e.clientY - rect.top;  // 鼠标在元素内的 y 坐标
+        const red = Math.round((x / rect.width) * 255);
+        const green = Math.round((y / rect.height) * 255);
+        const blue = 150; // 固定蓝色值
+        interactiveBox.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+    });
+    // 当鼠标离开盒子时恢复默认背景色
+    interactiveBox.addEventListener('mouseleave', function() {
+        interactiveBox.style.backgroundColor = '#ddd';
+    });
+  
+    // 加分项：额外交互 —— 根据整个窗口的鼠标位置改变页眉背景颜色
+    window.addEventListener('mousemove', function(e) {
+        const header = document.getElementById('page-header');
+        const hue = Math.round((e.clientX / window.innerWidth) * 360);
+        header.style.backgroundColor = `hsl(${hue}, 60%, 40%)`;
+    });
+  </script>
+  
 </body>
 </html>
