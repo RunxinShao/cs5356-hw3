@@ -2,10 +2,55 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>personal page</title>
+    <title>Personal Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 800px;
+        }
+        .content img {
+            margin-right: 20px;
+            max-width: 100%;
+            height: auto;
+            /* Apply grayscale filter for demonstration */
+            filter: grayscale(50%);
+            transition: filter 0.5s;
+        }
+        .content img:hover {
+            filter: grayscale(0%);
+        }
+        .content p {
+            flex: 1;
+            min-width: 250px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome!</h1>
-    
+    <header>
+        <h1>Welcome</h1>
+    </header>
+   
+    <section class="content">
+        <img src="distopia.png" alt="My personal photo" width="200">
+        <p>My name is Runxin Shao and I love coding.</p>
+    </section>
+   
+    <section>
+        <h2>More About Me</h2>
+        <details>
+            <summary>Click to learn more</summary>
+            <p>I am learning front-end development and exploring new CSS properties and HTML elements.</p>
+        </details>
+    </section>
 </body>
 </html>
